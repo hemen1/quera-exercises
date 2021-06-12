@@ -13,7 +13,7 @@ if not os.path.exists(project_dir):
     os.mkdir(project_dir)
     readme_text = \
         readme_text.format(site,project_name,project_url)
-    with open(os.path.join(project_dir,'README.md'),'w') as f:
+    with open(os.path.join(project_dir,'README.md'),'w',encoding='utf-8') as f:
         f.write(readme_text)
 else:
     raise ValueError('This project exists.')
